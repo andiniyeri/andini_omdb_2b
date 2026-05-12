@@ -37,30 +37,30 @@
             </div>
 
             <div class="card card-primary">
-              <div class="card-header"><h4>Register</h4></div>
+              <div class="card-header"><h4>{{__('messages.Register')}}</h4></div>
 
               <div class="card-body">
-                <form method="POST" action="{{url('/register')}}">
+                <form method="POST" action="{{ route('signup') }}" class="needs-validation" novalidate="">
                   @csrf
                   <div class="form-group">
-                      <label for="full_name">Full Name</label>
+                      <label for="full_name">{{__('messages.Full Name')}}</label>
                       <input id="full_name" type="text" class="form-control" name="name" autofocus>
                       @error('name')
-                        <span class="text-danger text-sm">{{ $massage }}</span>
+                        <span class="text-danger text-sm">{{ $message }}</span>
                       @enderror
                   </div>
 
                   <div class="form-group">
-                    <label for="email">Email</label>
+                    <label for="email">{{__('messages.Email')}}</label>
                     <input id="email" type="email" class="form-control" name="email">
                     @error('email')
-                        <span class="text-danger text-sm">{{ $massage }}</span>
+                        <span class="text-danger text-sm">{{ $message }}</span>
                       @enderror
                   </div>
 
                   <div class="row">
                     <div class="form-group col-6">
-                      <label for="password" class="d-block">Password</label>
+                      <label for="password" class="d-block">{{__('messages.Password')}}</label>
                       <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="password">
                       <div id="pwindicator" class="pwindicator">
                         <div class="bar"></div>
@@ -68,7 +68,7 @@
                       </div>
                     </div>
                     <div class="form-group col-6">
-                      <label for="password2" class="d-block">Password Confirmation</label>
+                      <label for="password2" class="d-block">{{__('messages.Password Confirmation')}}</label>
                       <input id="password2" type="password" class="form-control" name="password_confirmation">
                     </div>
                   </div>
@@ -76,14 +76,14 @@
 
                   <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-lg btn-block">
-                      Register
+                      {{__('messages.Register')}}
                     </button>
                   </div>
                 </form>
               </div>
             </div>
             <div class="mt-5 text-muted text-center">
-              Already have an account? <a href="{{url('/')}}">Login here</a>
+              {{__('messages.Already have an account?')}} <a href="{{url('/')}}">{{__('messages.Login here')}}</a>
             </div>
             <div class="simple-footer">
               Copyright &copy; Stisla <span id="year"></span>

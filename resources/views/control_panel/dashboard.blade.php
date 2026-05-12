@@ -26,11 +26,11 @@
             <div class="main-content">
                 <section class="section">
                     <div class="section-header">
-                        <h1>Movies</h1>
+                        <h1>{{__('messages.Movies')}}</h1>
                         <div class="section-header-breadcrumb">
                             <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-                            <div class="breadcrumb-item">Movies</div>
-                            <div class="breadcrumb-item">All Movies</div>
+                            <div class="breadcrumb-item">{{__('messages.Movies')}}</div>
+                            <div class="breadcrumb-item">{{__('messages.All Movies')}}</div>
                         </div>
                     </div>
 
@@ -39,7 +39,7 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4>All Movies</h4>
+                                        <h4>{{__('messages.All Movies')}}</h4>
                                     </div>
                                     <div class="card-body">
                                         <div class="float-right">
@@ -62,19 +62,18 @@
                                             <table class="table table-striped" id="movie-table">
                                                 <thead>
                                                     <tr>
-                                                        <th>Poster</th>
-                                                        <th>Title</th>
-                                                        <th>Year</th>
-                                                        <th>Type</th>
-                                                        <th>Action</th>
+                                                        <th>{{__('messages.Poster')}}</th>
+                                                        <th>{{__('messages.Title')}}</th>
+                                                        <th>{{__('messages.Year')}}</th>
+                                                        <th>{{__('messages.Type')}}</th>
+                                                        <th>{{__('messages.Action')}}</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody id="movie-container">
                                                     <tr id="empty-row">
                                                         <td colspan="5" class="text-center py-5">
                                                             <i class="fas fa-search fa-3x text-muted mb-3 d-block"></i>
-                                                            <span class="text-muted">Enter a keyword to search
-                                                                movies.</span>
+                                                            <span class="text-muted">{{__('messages.Enter a keyword to search movies.')}}</span>
                                                         </td>
                                                     </tr>
                                                 </tbody>
