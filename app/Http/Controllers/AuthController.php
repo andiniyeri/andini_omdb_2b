@@ -85,4 +85,19 @@ class AuthController extends Controller
             return redirect()->back()->with('error', 'Terjadi kesalahan');
         }
     }
+
+    public function logout()
+    {
+        try {
+            session()->flush();
+            return redirect('/')->with('success', 'Anda telah keluar');
+        } catch (\Throwable $th) {
+            Log::error([
+                'line'  => $th->getLine(),
+                'file'  => $th->getFile(),
+                'message' => $th->getMessage(),
+            ]);
+            return redirect()->back()->with('error', 'Terjadi kesalahan');
+        }
+    }
 }

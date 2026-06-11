@@ -72,6 +72,7 @@
                     <label for="email">{{__('messages.Email')}}</label>
                     <input id="email" type="email" class="form-control" name="email">
                     @error('email')
+                    
                         <span class="text-danger text-sm">{{ $message }}</span>
                       @enderror
                   </div>
